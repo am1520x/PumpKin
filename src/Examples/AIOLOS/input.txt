@@ -1,0 +1,9 @@
+interest 			= 5
+t_init 				= 13
+t_end 				= 16
+max_bp 				= 0
+tau_lifetime 		= 0
+max_path 			= 0
+f_min 				= 0
+
+

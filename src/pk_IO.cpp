@@ -731,6 +731,21 @@ void Read_reactions(In_data      &kinetics,
 void Average_kin(In_data &kinetics,
                  Rates   &rates)
 {
+    // Debugging: Print the input data
+    cout << "Time steps: " << kinetics.time.getIndex1Size() << endl;
+    cout << "Species: " << kinetics.densities[0].getIndex1Size() << endl;
+    cout << "Reactions: " << kinetics.rates[0].getIndex1Size() << endl;
+
+    // Ensure the time steps are valid
+    if (t_end < t_init) {
+        cout << "Error: t_end < t_init." << endl;
+        exit(EXIT_FAILURE);
+    }
+
+    // Debugging: Print the time range
+    cout << "Time range: " << t_init << " to " << t_end << endl;
+
+
     double delta_t = t_end - t_init;
 
     if (delta_t < 0)

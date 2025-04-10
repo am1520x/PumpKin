@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.3)
 project(PumpKin)
 
+set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -g")
+set(CMAKE_C_FLAGS_DEBUG "$ENV{CFLAGS} -g")
+
 INCLUDE_DIRECTORIES(/opt/local/include)
 LINK_DIRECTORIES(/opt/local/lib)
 
